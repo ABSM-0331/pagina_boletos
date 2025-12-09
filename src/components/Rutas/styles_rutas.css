@@ -1,0 +1,289 @@
+/* Estilos Globales heredados de tu CSS original */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* ------------------- Rutas.jsx ------------------- */
+
+/* Sección de Búsqueda (Rectángulo Azul - Superior) */
+.search-section {
+    background-color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.search-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.search-box {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background-color: #f9f9f9;
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+/* ------------------- CompRutas.jsx ------------------- */
+.rutas-section {
+    padding: 50px 20px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+}
+
+/* Título (Rectángulo Verde) */
+.rutas-title {
+    background: #8bc34a;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #fff;
+    text-align: center;
+    /* Estilos del rectángulo verde */
+    padding: 10px; 
+    display: inline-block;
+    min-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+}
+
+/* Carrusel Wrapper */
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.carousel-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 0 10px;
+    max-width: 1200px;
+    scrollbar-width: none;
+}
+
+.carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+/* Botones del Carrusel */
+.carousel-btn {
+    background: #17a2b8;
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn:hover {
+    background: #e68a00;
+}
+
+/* ------------------- CompCardMaps.jsx ------------------- */
+
+/* Tarjeta de Ruta */
+.route-card {
+    flex: 0 0 200px;
+    background: white;
+    border: 3px solid #17a2b8;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.route-card:hover {
+    border: 3px solid #e68a00;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.map-placeholder {
+    width: 100%;
+    height: 200px;
+    background: #e8f5e9;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.map-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-title {
+    padding: 10px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 0;
+}
+
+.card-text-small {
+    font-size: 13px;
+    color: #555;
+    text-align: center;
+    margin: 2px 0;
+}
+
+/* Botón "Ver Horarios" */
+.btn-horarios {
+    width: calc(100% - 20px);
+    margin: 10px 10px 15px 10px;
+    padding: 10px;
+    background: linear-gradient(to right, #8bc34a, #9ccc65);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.btn-horarios:hover {
+    opacity: 0.9;
+}
+
+/* ------------------- CompHorarios.jsx (Modal) ------------------- */
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente oscuro */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1050; /* Alto z-index para estar sobre el resto del contenido */
+}
+
+.modal-dialog-custom {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 90%;
+    max-width: 400px;
+    overflow: hidden;
+    transform: translateY(-50px);
+    transition: transform 0.3s ease-out;
+}
+
+.modal-content-custom {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-header-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.modal-title-custom {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+}
+
+.btn-close-custom {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #aaa;
+    line-height: 1;
+}
+
+.btn-close-custom:hover {
+    color: #555;
+}
+
+.modal-body-custom {
+    padding: 20px;
+}
+
+.horarios-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.horario-item {
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 16px;
+    color: #444;
+}
+
+.horario-item:last-child {
+    border-bottom: none;
+}
+
+.modal-footer-custom {
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+    text-align: right;
+}
+
+.btn-comprar {
+    padding: 10px 20px;
+    background: #17a2b8; /* Usamos un color de tu código HTML original o de Bootstrap */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-comprar:hover {
+    background: #e68a00;
+}
