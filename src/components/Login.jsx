@@ -31,7 +31,7 @@ export default function Login() {
             if (response.ok && data.success) {
                 localStorage.setItem("token", data.token);
                 localStorage.setItem("usuario", JSON.stringify(data.usuario));
-                window.location.href = "/comprar-boletos";
+                navigate("/comprar-boletos");
             } else {
                 setError(data.message || "Error al iniciar sesión");
             }
