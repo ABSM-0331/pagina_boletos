@@ -44,7 +44,7 @@ export default function Footer() {
                     <ul>
                         <li>📍 Calle 23 #789, Centro</li>
                         <li>📞 (997) 151-6542</li>
-                        <li>✉️ jesusElana@gmail.com</li>
+                        <li>✉️ jesusypolanco@gmail.com</li>
                     </ul>
                 </div>
             </div>
