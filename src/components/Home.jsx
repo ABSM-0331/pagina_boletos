@@ -1,3 +1,5 @@
+import CarouselBootstrap from "./Carousel";
+
 export default function Home() {
     return (
         <>
@@ -8,69 +10,7 @@ export default function Home() {
 
             <section className="carousel-section" id="rutas">
                 <h2>Nuestras Ciudades</h2>
-                <div className="carousel-container">
-                    <div className="carousel" id="carousel">
-                        <div className="carousel-item">
-                            <img
-                                src="https://g-hhzdd0aq46n.vusercontent.net/placeholder.svg?height=400&width=1200"
-                                alt="Mérida"
-                            ></img>
-                            <div className="carousel-caption">
-                                <h3>Mérida</h3>
-                                <p>La ciudad blanca, capital de Yucatán</p>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img
-                                src="https://g-hhzdd0aq46n.vusercontent.net/placeholder.svg?height=400&width=1200"
-                                alt="Progreso"
-                            ></img>
-                            <div className="carousel-caption">
-                                <h3>Progreso</h3>
-                                <p>Puerto y playa del Golfo de México</p>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img
-                                src="https://g-hhzdd0aq46n.vusercontent.net/placeholder.svg?height=400&width=1200"
-                                alt="Ticul"
-                            ></img>
-                            <div className="carousel-caption">
-                                <h3>Ticul</h3>
-                                <p>Cuna de la alfarería yucateca</p>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img
-                                src="https://g-hhzdd0aq46n.vusercontent.net/placeholder.svg?height=400&width=1200"
-                                alt="Oxkutzcab"
-                            ></img>
-                            <div className="carousel-caption">
-                                <h3>Oxkutzcab</h3>
-                                <p>La huerta del estado</p>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img
-                                src="https://g-hhzdd0aq46n.vusercontent.net/placeholder.svg?height=400&width=1200"
-                                alt="Muna"
-                            ></img>
-                            <div className="carousel-caption">
-                                <h3>Muna</h3>
-                                <p>Tradición y cultura maya</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="carousel-controls">
-                        <button className="carousel-btn" onclick="prevSlide()">
-                            ‹
-                        </button>
-                        <button className="carousel-btn" onClick="nextSlide()">
-                            ›
-                        </button>
-                    </div>
-                </div>
-                <div className="carousel-indicators" id="indicators"></div>
+                <CarouselBootstrap />
             </section>
 
             <section className="instructions-section" id="comprar">

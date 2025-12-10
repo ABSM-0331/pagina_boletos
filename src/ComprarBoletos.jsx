@@ -4,8 +4,9 @@ import DetallesViaje from "./components/DetallesViaje";
 import OpcionesAdicionales from "./components/OpcionesAdicionales";
 import ResumenCompra from "./components/ResumenCompra";
 import TicketPDF from "./components/TicketPDF";
+import "./estilo.css";
 
-const Boletos = () => {
+const ComprarBoletos = () => {
     const [nombre, setNombre] = useState("");
     const [email, setEmail] = useState("");
     const [telefono, setTelefono] = useState("");
@@ -291,7 +292,6 @@ const Boletos = () => {
     return (
         <>
             {/* Header y main igual que antes */}
-
             <main className="container py-5">
                 <div className="row">
                     <div className="col-lg-8">
@@ -441,4 +441,4 @@ const Boletos = () => {
     );
 };
 
-export default Boletos;
+export default ComprarBoletos;
